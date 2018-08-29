@@ -22,6 +22,7 @@
   padding: 5px;
   margin-left: 10rem;
   margin-right: 3rem;
+  margin-top: 1rem;
   width: auto;
   font-size: 16px;
 }
@@ -37,9 +38,6 @@
   margin-left: 160px;
 }
 
-.counter {
-  float: right;
-}
 .count {
   padding-left: 4.5rem;
   font-size: 34px;
