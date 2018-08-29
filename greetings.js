@@ -18,13 +18,8 @@ module.exports = function () {
       if (map[name] === undefined){
         map[name] = 0;
       }
-      for (let name in map) {
-        if (map[name] !== name) {
-          map[name] = 0;
-        }
-      }
-    }
-  // console.log(map);
+      map[name] += 1;
+     }
   }
 
   function returnMap() {
@@ -35,6 +30,10 @@ module.exports = function () {
     greetCount = Object.keys(map).length;
     return greetCount;
     }
+
+  function returnUser(username) {
+    return map[username];
+  }
 
   function alert(nameInput, checkedLanguage) {
     if (!nameInput && !checkedLanguage) {
@@ -86,6 +85,7 @@ return {
   greetPerson,
   counter,
   alert,
-  resetCount
+  resetCount,
+  returnUser
 }
 }

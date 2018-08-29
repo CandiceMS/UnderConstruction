@@ -52,22 +52,16 @@ app.get('/greeted', function(req, res) {
   });
 });
 
-// app.get('/greeted/:user', function(req, res) {
-//   res.render('greeted', {
-//     userList:
-//   });
-// });
+app.get('/greeted/:user', function(req, res) {
+  res.render('greetedUser', {
+    greetNumber: greet.returnUser(user)
+  });
+});
 
 app.post('/clear', function(req, res) {
    greet.resetCount();
   res.redirect('/');
 });
-
-// app.get('/actions', function(req, res) {
-//   res.render('actions', {
-//     actionsList: setBill.returnAll().actions,
-//   });
-// });
 
 // app.get('/actions/:type', function(req, res) {
 //   res.render('filter', {
